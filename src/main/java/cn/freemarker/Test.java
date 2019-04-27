@@ -9,10 +9,7 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.Writer;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class Test {
     public static void main(String[] args) throws IOException, TemplateException {
@@ -50,6 +47,10 @@ public class Test {
         goodsList.add(goods3);
 
         map.put("goodsList",goodsList);
+
+        map.put("today", new Date());
+
+        map.put("number",123456789);
         //第六步：创建一个 Writer 对象，一般创建一 FileWriter 对象，指定生成的文件名。
         Writer out = new FileWriter("e:/work/test.html");
 
